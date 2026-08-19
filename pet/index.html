@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' data: blob:;">
+  <title>斯卡蒂桌宠</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="stage">
+    <canvas id="pet"></canvas>
+  </div>
+
+  <div id="toolbar" class="hidden">
+    <select id="selSkin" title="时装"></select>
+    <select id="selModel" title="模型组"></select>
+    <select id="selAnim" title="动画"></select>
+    <select id="selScale" title="尺寸">
+      <option>0.5</option><option>0.75</option><option selected>1</option>
+      <option>1.25</option><option>1.5</option><option>2</option>
+    </select>
+    <button id="btnPin" title="置顶">📌</button>
+    <button id="btnQuit" title="退出">✕</button>
+  </div>
+
+  <script src="model-config.js"></script>
+  <script src="spine-runtime.js"></script>
+  <script src="pet.js"></script>
+</body>
+</html>
