@@ -1,0 +1,14 @@
+{
+  "name": "skadi-desktop-pet",
+  "version": "1.0.0",
+  "description": "明日方舟 斯卡蒂 桌宠 — 模型与动画取自 PRTS 干员模型页 (https://prts.wiki/w/斯卡蒂#干员模型)",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "preview": "node tools/serve.js"
+  },
+  "devDependencies": {
+    "electron": "^37.0.0"
+  }
+}
