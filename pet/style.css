@@ -1,0 +1,72 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+}
+
+#stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  cursor: grab;
+  background: transparent;
+}
+#stage:active { cursor: grabbing; }
+
+#pet {
+  display: block;
+  touch-action: none;
+}
+
+/* 悬停工具条 */
+#toolbar {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: 5px 8px;
+  border-radius: 8px;
+  background: rgba(24, 26, 32, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(6px);
+  z-index: 10;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+#toolbar.hidden {
+  opacity: 0;
+  transform: translateX(-50%) translateY(-6px);
+  pointer-events: none;
+}
+#toolbar select {
+  background: #2b2e36;
+  color: #e8eaf0;
+  border: 1px solid #3a3e48;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 3px 6px;
+  max-width: 110px;
+  outline: none;
+}
+#toolbar select:hover { border-color: #6a6aff; }
+#toolbar button {
+  background: #2b2e36;
+  color: #e8eaf0;
+  border: 1px solid #3a3e48;
+  border-radius: 5px;
+  width: 26px;
+  height: 24px;
+  font-size: 12px;
+  cursor: pointer;
+  line-height: 1;
+}
+#toolbar button:hover { border-color: #6a6aff; }
+#toolbar button.on { background: #6a6aff; border-color: #6a6aff; color: #fff; }
